@@ -13,7 +13,8 @@ export default function handler(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
-    }
+    },
+    body: JSON.stringify({username:'sa'})
 
   })
   .then((response) => response)

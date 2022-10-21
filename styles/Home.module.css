@@ -9,6 +9,7 @@
 .img{
   cursor: pointer;
  }
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -19,6 +20,11 @@
   align-items: center;
 
 }
+.main  button{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+ }
 .text{
   font-size: 2rem;
   font-weight: 600;

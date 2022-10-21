@@ -18,11 +18,12 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <ImSwitch size={80} color={'green'} onClick={turnOn}/>
+        <button><ImSwitch size={80} color={'green'} onClick={turnOn}/></button>
         <span className={styles.text} >Ligar</span>
         <br />
         <br />
-        <ImSwitch size={80} color={'red'} onClick={turnOff}/>
+        <button><ImSwitch size={80} color={'red'} onClick={turnOff}/></button>
+
         <span className={styles.text}>Desligar</span>
       </main>
 
