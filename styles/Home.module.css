@@ -1,14 +1,14 @@
 .container {
   padding: 0 2rem;
   margin: 0 auto;
-  height: 100vh;
+  height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.img{
+.img {
   cursor: pointer;
- }
+}
 
 .main {
   min-height: 100vh;
@@ -18,20 +18,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.main  button{
+.main button {
   cursor: pointer;
   border: none;
   background-color: transparent;
- }
-.text{
+}
+.text {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
   color: #000;
   margin: 0;
   line-height: 1.5;
+}
+.input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  outline: none;
 }
 .footer {
   width: 100%;
@@ -46,7 +54,7 @@
   left: 0;
   color: white;
 }
-.footer .text{
+.footer .text {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
@@ -61,5 +69,3 @@
   gap: 0.5rem;
   flex-grow: 1;
 }
-
-

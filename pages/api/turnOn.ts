@@ -1,25 +1,23 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import axios from 'axios'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
-  name: string
+  message: string
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  fetch('https://46f1-177-65-158-83.sa.ngrok.io/on?password=190899',{
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({username:'sa'})
-
-  })
-  .then((response) => response)
-  .then((data) => res.status(200));
-  return res.send({
-        name: 'ok'
-  });
+  try {
+    const url = req.body.url.replace(/\/$/, '')
+    await axios.post(url + '/on?password=190899')
+    return res.send({
+      message: 'ok',
+    })
+  } catch (error) {
+    return res.send({
+      message: 'error',
+    })
+  }
 }
